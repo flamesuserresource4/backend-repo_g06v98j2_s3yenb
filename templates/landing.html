@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="landing">
+  <div class="gradient-bg"></div>
+  <header class="container nav">
+    <div class="brand">Inventory<span>Manager</span></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/profile">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-content">
+      <h1>Manage your inventory with clarity and speed</h1>
+      <p>Beautiful, modern dashboard to keep track of your stock levels, all in one place.</p>
+      <a class="btn primary" href="/dashboard">Go to Dashboard</a>
+    </div>
+    <div class="hero-card">
+      <div class="stat">
+        <div class="stat-value">412</div>
+        <div class="stat-label">Items Tracked</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">98%</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">12</div>
+        <div class="stat-label">Vendors</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <p>© {{ 2025 }} Inventory Manager • Built with FastAPI</p>
+  </footer>
+</body>
+</html>

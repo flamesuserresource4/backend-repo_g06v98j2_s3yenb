@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile • Inventory Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="gradient-bg subtle"></div>
+  <header class="container nav">
+    <div class="brand">Inventory<span>Manager</span></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a class="active" href="/profile">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="page-header">
+      <div>
+        <h1>Your Profile</h1>
+        <p class="muted">Manage your account details</p>
+      </div>
+    </section>
+
+    <section class="profile-grid">
+      <div class="profile-card">
+        <div class="avatar">AJ</div>
+        <div>
+          <h3> {{ user.name }} </h3>
+          <p class="muted"> {{ user.email }} </p>
+          <span class="chip"> {{ user.role }} </span>
+        </div>
+      </div>
+
+      <div class="stats card">
+        <div class="stat">
+          <div class="stat-value">24</div>
+          <div class="stat-label">Items Added</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Low Stock Alerts</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Teams</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© {{ 2025 }} Inventory Manager</p>
+  </footer>
+</body>
+</html>

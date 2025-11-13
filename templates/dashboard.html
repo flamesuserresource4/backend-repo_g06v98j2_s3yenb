@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard • Inventory Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="gradient-bg subtle"></div>
+
+  <header class="container nav">
+    <div class="brand">Inventory<span>Manager</span></div>
+    <nav>
+      <a href="/">Home</a>
+      <a class="active" href="/dashboard">Dashboard</a>
+      <a href="/profile">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="page-header">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="muted">Quick overview of your items and stock levels</p>
+      </div>
+      <div class="actions">
+        <button class="btn">Export</button>
+        <button class="btn primary">Add Item</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+            <tr>
+              <td>{{ item.name }}</td>
+              <td><span class="qty">{{ item.quantity }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© {{ 2025 }} Inventory Manager</p>
+  </footer>
+</body>
+</html>
